@@ -1,0 +1,51 @@
+body {
+    color: white;
+    background-color: rgb(30, 30, 30);
+    font-family: 'Open Sans', Helvetica, Arial;
+    padding: 0.5vmax 1vmax;
+}
+header {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+p {
+    margin-bottom: 2vmax;
+}
+button {
+    background-color: white;
+    font-size: 1.1em;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 2vmax 3vmax;
+    transition-duration: 0.4s;
+}
+button:hover {
+    background-color: grey;
+    color: white;
+    cursor: pointer;
+}
+.btnDiv {
+    display: flex;
+    justify-content: center;
+    margin: 2vmax;
+}
+#colourValue {
+    font-size: 2em;
+}
+footer {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    padding: 1vmax;
+}
+#footer {
+    background-color: white;
+    border-radius: 10px;
+    padding: 0.7vmax 3vmax;
+}
+.socialButton {
+    width: 4vmin;
+    height: 4vmin;
+}
