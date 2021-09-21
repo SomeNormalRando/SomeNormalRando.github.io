@@ -1,4 +1,3 @@
-# SomeNormalRando.github.io
-Repository for my GitHub Pages website
+# Repository for the [main page](https://somenormalrando.github.io/) of my GitHub Pages website
 
-[Visit it here](https://somenormalrando.github.io/)
+https://somenormalrando.github.io/

@@ -1,51 +1,33 @@
+:root {
+	--background-color: #121212;
+	--foreground-color: #f0f0f0;
+	--primary-color: rgb(250, 146, 0);
+	--primary-hover-color: rgb(240, 116, 0);
+	font-size: 62.5%;
+}
 body {
-    color: white;
-    background-color: rgb(30, 30, 30);
-    font-family: 'Open Sans', Helvetica, Arial;
-    padding: 0.5vmax 1vmax;
+	margin: 0;
+	padding: 0;
+	background-color: var(--background-color);
+	color: var(--foreground-color);
+	font-family: 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+	font-size: 1.6rem;
+	text-align: center;
 }
-header {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+h1 {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 3.4rem;
 }
-p {
-    margin-bottom: 2vmax;
+h2 {
+	font-size: 2.8rem;
+	text-decoration: underline;
 }
-button {
-    background-color: white;
-    font-size: 1.1em;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    padding: 2vmax 3vmax;
-    transition-duration: 0.4s;
+h3 {
+	font-size: 2.2rem;
 }
-button:hover {
-    background-color: grey;
-    color: white;
-    cursor: pointer;
-}
-.btnDiv {
-    display: flex;
-    justify-content: center;
-    margin: 2vmax;
-}
-#colourValue {
-    font-size: 2em;
-}
-footer {
-    width: 95%;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    bottom: 0;
-    padding: 1vmax;
-}
-#footer {
-    background-color: white;
-    border-radius: 10px;
-    padding: 0.7vmax 3vmax;
-}
-.socialButton {
-    width: 4vmin;
-    height: 4vmin;
+hr {
+	width: 90%;
+	height: 0.25vmax;
+	background-color: var(--foreground-color);
+	border: none;
 }
