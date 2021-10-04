@@ -1,31 +1,49 @@
 <!DOCTYPE html>
-<html lang='en-GB'>
+<html lang="en-GB">
 	<head>
-		<meta charset='UTF-8'>
-		<meta name='viewport' content='width=device-width, initial-scale=1'>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<title>SomeNormalRando</title>
+		<meta name="description" content="The main page of SomeNormalRando's site">
 
-		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
-		<link rel='stylesheet' href='./style.css'>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
 
-		<script src='navbar.js' defer></script>
-		<script src='script.js' defer></script>
+		<link rel="stylesheet" href="./style.css">
+
+		<script src="navbar.js" defer></script>
+		<script src="script.js" defer></script>
 	</head>
 	<body>
-		<h1>Hello there. I'm Rando.</h1>
-		<hr>
-		<section>
-			<h2>About me</h2>
-			<h3>Who are you?</h3>
-			<p>I'm a human from Earth.</p>
-			<h3>Is that it?</h3>
-			<p>Yes.</p>
-		</section>
-		<section>
-			<h2>Portfolio</h2>
-			<p>Coming Soon™</p>
-			<small>(I'm lazy)</small>
-		</section>
+		<header>
+			<div id="h1-container">
+				<h1>SomeNormalRando<span class="small-text"> .github.io</span></h1>
+			</div>
+		</header>
+		<main>
+			<section id="about">
+				<h2>About</h2>
+				<p>Hey, I'm Rando.</p>
+				<p>I like to code stuff and occasionally make art. You can find me on GitHub 
+					<a href="https://github.com/SomeNormalRando" target="_blank" title="My GitHub profile">here</a>.
+				</p>
+			</section>
+			<section id="portfolio">
+				<h2>Portfolio</h2>
+				<p>Here's some stuff that I've made.</p>
+				<div class="project-container">
+					<img src="https://cdn.discordapp.com/avatars/812960290718482483/d8431577a46eefb28b05c10d6dee3070.png" alt="Entity's icon" title="Entity's icon" class="project-icon">
+
+					<h3>Entity</h3>
+					<p>Entity is a <a href="https://discord.com/">Discord</a> bot I made, written in <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a> with the library <a href="https://discord.js.org/">Discord.js</a>, mostly for fun and learning JS.</p>
+
+					<p>Its source code is publicly available on GitHub, along with the invite link.</p>
+					<a href="https://github.com/SomeNormalRando/Entity" target="_blank" class="github-link-button link-button" title="View source code on GitHub">View on GitHub</a>
+				</div>
+				<p>More coming soon™</p>
+			</section>
+		</main>
 	</body>
 </html>

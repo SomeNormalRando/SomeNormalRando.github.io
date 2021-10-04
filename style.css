@@ -10,24 +10,76 @@ body {
 	padding: 0;
 	background-color: var(--background-color);
 	color: var(--foreground-color);
-	font-family: 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
-	font-size: 1.6rem;
+	font-family: "Open Sans", "Trebuchet MS", Arial, sans-serif;
+	font-size: 1.8rem;
 	text-align: center;
 }
+#h1-container {
+	padding: 37.5vh 0;
+	/* background-image: radial-gradient(rgb(100, 10, 255) 20%, rgb(30, 15, 255)); */
+	/* background-image: linear-gradient(to bottom, rgb(100, 140, 255) 0% 12.5%, rgb(80, 120, 255) 12.5% 25%, rgb(60, 100, 255) 25% 37.5%, rgb(40, 80, 235) 37.5% 50%, rgb(20, 60, 215) 50% 62.5%, rgb(0, 40, 195) 62.5% 75%, rgb(0, 20, 175) 75% 87.5%, rgb(0, 0, 155) 87.5% 100%); */
+	background-image: linear-gradient(to bottom, rgb(100, 140, 255), rgb(0, 0, 155));
+}
+h1, h2, h3 { font-family: Montserrat, "Gill Sans MT", "Arial Black", Arial, sans-serif; }
 h1 {
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: 3.4rem;
+	padding: 1rem 0;
+	background-color: var(--background-color);
+	font-size: 4rem;
+	letter-spacing: 0.8rem;
+	text-transform: uppercase;
+}
+.small-text {
+	font-size: 0.45em;
 }
 h2 {
-	font-size: 2.8rem;
-	text-decoration: underline;
+	font-size: 3rem;
+	letter-spacing: 0.4rem;
+	text-transform: uppercase;
 }
 h3 {
-	font-size: 2.2rem;
+	font-size: 2.34rem;
 }
-hr {
-	width: 90%;
-	height: 0.25vmax;
-	background-color: var(--foreground-color);
-	border: none;
+section {
+	padding: 2.5rem;
+}
+a {
+	color: var(--primary-color);
+	transition-duration: 400ms;
+	text-decoration: none;
+}
+a:hover {
+	background-color: var(--primary-color);
+	color: var(--foreground-color);
+	text-decoration: underline;
+}
+.link-button {
+	display: flex;
+	width: max-content;
+	align-items: center;
+	padding: 1.2rem;
+	background-color: transparent;
+	border: var(--foreground-color) solid 0.3rem;
+	font-family: "Consolas", "Lucida Console", "Courier New", Courier, monospace;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+.link-button:hover {
+	padding: 1.2rem 2rem;
+	border-color: var(--primary-color);
+	font-weight: 600;
+	text-decoration: none;
+}
+.link-button > img {
+	padding: 0 1rem;
+}
+.project-container {
+	border-bottom: var(--foreground-color) solid 0.2rem;
+	padding: 2rem;
+	margin: 2rem 0;
+}
+.project-icon {
+	width: 20rem;
+	height: 20rem;
+	margin: 2rem;
+	box-shadow: 0rem 0rem 2rem 1rem black;
 }

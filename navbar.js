@@ -1,54 +1,55 @@
 /* This script loads a navigation bar and stylesheet for it into the page */
-const styleContent = 
+"use strict";
+/* eslint-disable max-len */
+const styleContent =
 `nav {
 	display: flex;
+	position: sticky;
+	top: 0;
 	background-color: rgb(250, 146, 0);
 	background-color: var(--primary-color);
+
 }
 nav a {
 	margin: 0;
-	padding: 1.3rem 2.5rem;
+	padding: 1rem 2rem;
 	color: rgb(240, 240, 240);
 	color: var(--foreground-color);
 	background-color: rgb(250, 146, 0);
 	background-color: var(--primary-color);
-	font-size: 1.5rem;
+	font-family: "Open Sans", "Arial Black", Arial, sans-serif;
+	font-size: 1.6rem;
+	font-weight: 700;
 	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
 	transition-duration: 400ms;
 }
 nav a:hover {
 	cursor: pointer;
-	color: rgb(255, 255, 255);
-	background-color: rgb(240, 116, 0);
-	background-color: var(--primary-hover-color);
+	color: rgb(250, 146, 0);
+	color: var(--primary-color);
+	background-color: white;
 }`;
 
 const baseURL = "https://somenormalrando.github.io/";
 
-const links_left = {
-	"Home": baseURL,
-	"Portfolio": `${baseURL}#portfolio`,
+const links = {
+	Home: [baseURL, "Home page"],
+	Portfolio: [`${baseURL}#portfolio`],
 };
-const links_right = {
-	"GitHub": "https://github.com/SomeNormalRando"
+const navElement = document.createElement("nav");
+
+for (const linkName of Object.keys(links)) {
+	const newLink = document.createElement("a");
+	newLink.href = links[linkName][0];
+	newLink.innerText = linkName;
+	newLink.title = links[linkName][1] || linkName;
+	navElement.appendChild(newLink);
 }
 
-const nav = document.createElement("nav");
-for (const link of Object.keys(links_left)) {
-	const newLink = document.createElement("a");
-	newLink.href = links_left[link];
-	newLink.innerText = link;
-	nav.appendChild(newLink);
-}
-for (const link of Object.keys(links_right)) {
-	const newLink = document.createElement("a");
-	newLink.href = links_right[link];
-	newLink.innerHTML = `${link} <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>`;
-	newLink.target = "_blank";
-	newLink.style.marginLeft = "auto";
-	nav.appendChild(newLink);
-}
-document.body.insertBefore(nav, document.body.firstChild);
+const headerElement = document.querySelector("header");
+if (headerElement) document.body.insertBefore(navElement, headerElement);
 
 const styleElement = document.createElement("style");
 styleElement.textContent = styleContent;
