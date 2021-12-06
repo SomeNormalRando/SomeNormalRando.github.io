@@ -1,8 +1,9 @@
 :root {
-	--background-color: #121212;
-	--foreground-color: #f0f0f0;
-	--primary-color: rgb(250, 146, 0);
-	--primary-hover-color: rgb(240, 116, 0);
+	--background-color: rgb(12 12 12);
+	--foreground-color: rgb(240 240 240);
+	--primary-color: rgb(250 146 0);
+	--primary-hover-color: rgb(240 116 0);
+
 	font-size: 62.5%;
 }
 body {
@@ -14,34 +15,6 @@ body {
 	font-size: 1.8rem;
 	text-align: center;
 }
-#h1-container {
-	padding: 37.5vh 0;
-	/* background-image: radial-gradient(rgb(100, 10, 255) 20%, rgb(30, 15, 255)); */
-	/* background-image: linear-gradient(to bottom, rgb(100, 140, 255) 0% 12.5%, rgb(80, 120, 255) 12.5% 25%, rgb(60, 100, 255) 25% 37.5%, rgb(40, 80, 235) 37.5% 50%, rgb(20, 60, 215) 50% 62.5%, rgb(0, 40, 195) 62.5% 75%, rgb(0, 20, 175) 75% 87.5%, rgb(0, 0, 155) 87.5% 100%); */
-	background-image: linear-gradient(to bottom, rgb(100, 140, 255), rgb(0, 0, 155));
-}
-h1, h2, h3 { font-family: Montserrat, "Gill Sans MT", "Arial Black", Arial, sans-serif; }
-h1 {
-	padding: 1rem 0;
-	background-color: var(--background-color);
-	font-size: 4rem;
-	letter-spacing: 0.8rem;
-	text-transform: uppercase;
-}
-.small-text {
-	font-size: 0.45em;
-}
-h2 {
-	font-size: 3rem;
-	letter-spacing: 0.4rem;
-	text-transform: uppercase;
-}
-h3 {
-	font-size: 2.34rem;
-}
-section {
-	padding: 2.5rem;
-}
 a {
 	color: var(--primary-color);
 	transition-duration: 400ms;
@@ -52,34 +25,80 @@ a:hover {
 	color: var(--foreground-color);
 	text-decoration: underline;
 }
-.link-button {
+.image-link:hover {
+	background-color: unset;
+	color: unset;
+	text-decoration: unset;
+}
+nav {
 	display: flex;
-	width: max-content;
-	align-items: center;
-	padding: 1.2rem;
-	background-color: transparent;
-	border: var(--foreground-color) solid 0.3rem;
-	font-family: "Consolas", "Lucida Console", "Courier New", Courier, monospace;
+	position: sticky;
+	top: 0;
+	background-color: var(--primary-color);
+}
+/* stylelint-disable-next-line no-descending-specificity */
+nav a {
+	display: inline-block;
+	margin: 0;
+	padding: 1.2rem 2rem;
+	background-color: var(--primary-color);
+	color: var(--foreground-color);
+	font-family: Montserrat, "Arial Black", Arial, sans-serif;
+	font-size: 1.6rem;
+	font-weight: 700;
 	text-transform: uppercase;
 	text-decoration: none;
+	transition-duration: 400ms;
 }
-.link-button:hover {
-	padding: 1.2rem 2rem;
-	border-color: var(--primary-color);
-	font-weight: 600;
-	text-decoration: none;
+/* stylelint-disable-next-line no-descending-specificity */
+nav a:hover {
+	cursor: pointer;
+	background-color: white;
+	color: var(--primary-color);
 }
-.link-button > img {
-	padding: 0 1rem;
+header {
+	padding: 40vh 0;
+	background-image: linear-gradient(to bottom, rgb(100 140 255), rgb(0 0 155));
+}
+h1, h2, h3 {
+	font-family: Montserrat, "Gill Sans MT", "Arial Black", Arial, sans-serif;
+}
+h1 {
+	margin: 0;
+	padding: 1rem 0;
+	background-color: var(--background-color);
+	font-size: 5rem;
+	text-transform: uppercase;
+	letter-spacing: 0.8rem;
+}
+.small-text {
+	font-size: 0.45em;
+}
+h2 {
+	font-size: 3rem;
+	text-transform: uppercase;
+	letter-spacing: 0.4rem;
+}
+h3 {
+	font-size: 2.34rem;
+}
+section {
+	padding: 2.5rem;
+}
+#portfolio {
+	background-color: rgb(12 12 32);
+}
+#about {
+	background-color: rgb(32 12 12);
 }
 .project-container {
-	border-bottom: var(--foreground-color) solid 0.2rem;
-	padding: 2rem;
 	margin: 2rem 0;
+	padding: 2rem;
+	border-bottom: var(--foreground-color) solid 0.2rem;
 }
 .project-icon {
 	width: 20rem;
 	height: 20rem;
 	margin: 2rem;
-	box-shadow: 0rem 0rem 2rem 1rem black;
+	box-shadow: 0 0 2rem 1rem black;
 }

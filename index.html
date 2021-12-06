@@ -13,37 +13,40 @@
 
 		<link rel="stylesheet" href="./style.css">
 
-		<script src="navbar.js" defer></script>
 		<script src="script.js" defer></script>
 	</head>
 	<body>
+		<nav>
+			<a href="#about">About</a>
+			<a href="#portfolio">Portfolio</a>
+		</nav>
 		<header>
-			<div id="h1-container">
-				<h1>SomeNormalRando<span class="small-text"> .github.io</span></h1>
-			</div>
+			<h1>Some<wbr>Normal<wbr>Rando<span class="small-text"> .github.io</span></h1>
 		</header>
 		<main>
 			<section id="about">
 				<h2>About</h2>
 				<p>Hey, I'm Rando.</p>
 				<p>I like to code stuff and occasionally make art. You can find me on GitHub 
-					<a href="https://github.com/SomeNormalRando" target="_blank" title="My GitHub profile">here</a>.
+					<a href="https://github.com/SomeNormalRando" target="_blank">here</a>.
 				</p>
 			</section>
 			<section id="portfolio">
 				<h2>Portfolio</h2>
 				<p>Here's some stuff that I've made.</p>
+
 				<div class="project-container">
-					<img src="https://cdn.discordapp.com/avatars/812960290718482483/d8431577a46eefb28b05c10d6dee3070.png" alt="Entity's icon" title="Entity's icon" class="project-icon">
+					<a href="https://github.com/SomeNormalRando/Entity" class="image-link">
+						<img src="https://cdn.discordapp.com/avatars/812960290718482483/d8431577a46eefb28b05c10d6dee3070.png" alt="Entity's icon" class="project-icon">
+					</a>
 
-					<h3>Entity</h3>
-					<p>Entity is a <a href="https://discord.com/">Discord</a> bot I made, written in <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a> with the library <a href="https://discord.js.org/">Discord.js</a>, mostly for fun and learning JS.</p>
+					<h3><a href="https://github.com/SomeNormalRando/Entity">Entity</a></h3>
+					<p>Entity is a <a href="https://discord.com/">Discord</a> bot I made, written in <a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a> with the library <a href="https://discord.js.org/">Discord.js</a>.</p>
 
-					<p>Its source code is publicly available on GitHub, along with the invite link.</p>
-					<a href="https://github.com/SomeNormalRando/Entity" target="_blank" class="github-link-button link-button" title="View source code on GitHub">View on GitHub</a>
+					<p>Its source code and invite link are publicly available <a href="https://github.com/SomeNormalRando/Entity">on GitHub.</a></p>
 				</div>
-				<p>More coming soon™</p>
 			</section>
+			<p>More coming soon™</p>
 		</main>
 	</body>
 </html>
